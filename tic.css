@@ -160,7 +160,7 @@
 .player.active span:first-child{
     color: #56baed;
 }
-.player.active span:ntn-child{
+.player.active span:nth-child(2){
     color: #fff;
 }
 .player.active .slider{
