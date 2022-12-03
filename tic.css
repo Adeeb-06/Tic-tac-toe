@@ -1,0 +1,248 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+
+.c {
+    height: 100vh;
+    background: #56baed;
+
+}
+
+.cont {
+    height: 202px;
+    padding: 14px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    transition: all 0.3s ease;
+}
+@media screen and (max-width:410px) {
+    .cont{
+        width: 354px;
+
+    }
+    @media screen and (max-width:460px) {
+        .cont{
+            width: 354px;
+        }
+    }
+}
+.cont.hide{
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50% , -50%) scale(0.9);
+}
+.playboard{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+
+}
+
+.headr {
+    font-size: 29px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #acc;
+
+}
+
+.sel {
+    position: relative;
+    top: 13px;
+    font-size: 26px;
+
+}
+
+.x {
+    position: relative;
+    top: 28px;
+    height: 39px;
+    width: 109px;
+    background-color: #56baed;
+    left: 29px;
+    padding: 0 20px 0 20px;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    
+    
+}
+@media screen and (max-width:410px) {
+    .x{
+        top: 12px;
+    }
+}
+@media screen and (max-width:460px) {
+    .x{
+        top: 12px;
+    }
+
+}
+.x:hover{
+    transform: scale(0.96);
+}
+.o {
+    position: relative;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    top: 28px;
+    height: 39px;
+    color: #fff;
+    width: 109px;
+    left: 22%;
+    background-color: #56baed;
+    padding: 0 20px 0 20px;
+    transition: all 0.3s ease;
+}
+@media screen and (max-width:410px) {
+    .o{
+        top: 12px;
+    }
+}
+    @media screen and (max-width:460px) {
+        .o{
+            top: 12px;
+        }
+}
+.o:hover , .resultbox .btn button:hover{
+    transform: scale(0.96);
+}
+.playboard {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50% , -50%) scale(0.9);
+    transition: all 0.3 ease;
+}
+.playboard.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50% , -50%) scale(1);
+}
+.playboard .details{
+
+    background: #fff;
+    padding: 7px;
+    border-radius: 5px ;
+}
+.playboard .details .player{
+    display: flex;
+    width: 100%;
+    position: relative;
+    justify-content: space-between;
+}
+.playboard .details span{
+    width: 100%;
+    border-radius: 5px;
+    color: #56baed;
+    padding: 7px 0;
+    font-size: 19px;
+    font-weight: 500;
+    cursor: default;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+    transition: all 0.3s ease;
+}
+.details span:first-child{
+   color: #fff;
+}
+.player.active span:first-child{
+    color: #56baed;
+}
+.player.active span:ntn-child{
+    color: #fff;
+}
+.player.active .slider{
+    left: 50%;
+}
+
+.playboard section{
+    display: flex;
+}
+
+.details .slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background: #56baed;
+    border-radius: 5px;
+    z-index: 2;  
+    transition: all 0.3s ease;  
+}
+.playboard section span{
+    display: block;
+    font-size: 40px;
+    text-align: center;
+    border-radius: 5px;
+    line-height: 80px;
+    height: 80px;
+    width: 80px;
+    background:#fff;
+    margin: 2px;
+
+}
+.playboard .playarea{
+    margin-top: 20px;
+}
+.resultbox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 350px;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50% , -50%) scale(0.9);
+    transition: all 0.3 ease;
+}
+.resultbox.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50% , -50%) scale(1);
+}
+.resultbox .wontext{
+    font-size: 25px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}
+.resultbox .wontext p {
+    font-weight: 600;
+    margin: 0 3px;
+}
+.resultbox .btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.resultbox .btn button{
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    top: 28px;
+    height: 39px;
+    color: #fff;
+    width: 109px;
+    left: 22%;
+    background-color: #56baed;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+}
